@@ -1,9 +1,10 @@
 # -----------
 # User Instructions
-# 
+#
 # Define two functions, straight(ranks) and flush(hand).
 # Keep in mind that ranks will be ordered from largest
 # to smallest.
+
 
 def straight(ranks) -> bool:
     "Return True if the ordered ranks form a 5-card straight."
@@ -13,10 +14,11 @@ def straight(ranks) -> bool:
         return True
     return False
 
+
 def flush(hand) -> bool:
     "Return True if all the cards have the same suit."
-    suits = [s for r,s in hand]
-    suits_rank = {'D': 1, 'S': 2, 'H': 3, 'C': 4}
+    suits = [s for r, s in hand]
+    suits_rank = {"D": 1, "S": 2, "H": 3, "C": 4}
     suits_form = []
     for suit in suits:
         suits_form.append(suits_rank[suit])
@@ -24,7 +26,7 @@ def flush(hand) -> bool:
     if avg == suits_rank[suit]:
         return True
     return False
-    
+
 
 def test():
     "Test cases for the functions in poker program."
@@ -38,6 +40,7 @@ def test():
     assert flush(f) == True
     assert flush(sf) == True
     assert flush(fk) == False
-    return 'tests pass'
+    return "tests pass"
+
 
 print(test())
